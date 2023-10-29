@@ -1,0 +1,24 @@
+# Function Demo
+
+This R Markdown file is used to demonstrate the function created in data_transform.R that can rank the chicken by weight for each time frame. The second parameter of the function sets the number of chicken displayed for each time frame.
+
+```{r}
+source("data_transform.R")
+
+# First import the dataset
+data <- ChickWeight
+
+# Call the function and set the second parameter to 2
+new_data <- rank_chicken_by_date(data, 2)
+new_data
+```
+
+As is shown in the table above, for each time frame, the top two heaviest chicken are shown. Now we change the parameter to 3.
+
+```{r}
+# Call the function and set the second parameter to 3
+new_data <- rank_chicken_by_date(data, 3)
+new_data
+```
+
+As is shown above, with second parameter set to 3, now the table displays three heaviest chicken for each time frame.
